@@ -1,9 +1,11 @@
+*** Program to read text files and update tables ***
+
 import MySQLdb
 
-cnx = MySQLdb.connect(host="127.0.0.1",
-                      user="root",
-                      passwd="Apoorv_93",
-                      db="test")
+cnx = MySQLdb.connect(host="xxx.x.x.x",
+                      user="xxxx",
+                      passwd="********",
+                      db="xxxx")
 cursor = cnx.cursor()
 
 with open('C:/Users/Apoorv Mishra/Downloads/trips/trips/calendar.txt', 'r') as f:
@@ -65,12 +67,11 @@ query = "SELECT DISTINCT calendar.service_id, trips.trip_id, monday, tuesday, we
         " on stop_times.trip_id = trips.trip_id where cast(stop_times.arrival_time as time) > '24:00:00'"
 
 cursor.execute(query)
-'''result_set = cursor.fetchall()'''
-'''rcount = int(cursor.rowcount)'''
+
 myArray = cursor.fetchall()
 myList = list()
 for row in enumerate(myArray):
-    '''row = cursor.fetchone()'''
+    
     print(row)
     i=0
     myList.insert(0, int(myArray[i][8]))
@@ -89,10 +90,6 @@ cursor.execute("UPDATE stop_times SET arrival_time = TIMEDIFF(arrival_time,'24:0
                "departure_time = TIMEDIFF(departure_time,'24:00:00') "
                "WHERE cast(stop_times.arrival_time as time) > '24:00:00'")
 
-'''query = "Select stops.stop_id, calendar.Monday, routes.route_id, TIMEDIFF(max(stop_times.arrival_time),min(stop_times.arrival_time)) " \
-        "as hours_of_service join stop_times on stops.stop_id=stop_times.stop_id " \
-        "join trips on trips.trip_id=stop_time.trip_id join calendar on trips.service_id=calendar.service_id " \
-        "where calendar.monday=1"'''
 
 query = "Insert into table1(stop_id, monday, route_id, arrival_time) Select stop_times.stop_id, calendar.monday, " \
         "routes.route_id, stop_times.arrival_time from stop_times join stops on stops.stop_id = stop_times.stop_id " \
