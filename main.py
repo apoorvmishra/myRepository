@@ -1,9 +1,9 @@
 import MySQLdb
 
-cnx = MySQLdb.connect(host="127.0.0.1",
-                      user="root",
-                      passwd="Apoorv_93",
-                      db="test")
+cnx = MySQLdb.connect(host="",
+                      user="",
+                      passwd="",
+                      db="")
 cursor = cnx.cursor()
 
 with open('C:/Users/Apoorv Mishra/Downloads/trips/trips/calendar.txt', 'r') as f:
