@@ -1,3 +1,4 @@
+/*Testbench file to read test vectors from text file. This testbench file is for the Square-Modulus and Cellular Automata module. This is a general way of writing testbench file.*/
 module testbench1_2();
 logic [7:0]A;
 logic [3:0]B;
