@@ -1,3 +1,4 @@
+'''Program to read data from text file, write it into database, make changes to the database and write back data to text file'''
 import MySQLdb
 
 cnx = MySQLdb.connect(host="",
