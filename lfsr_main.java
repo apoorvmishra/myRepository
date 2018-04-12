@@ -1,3 +1,4 @@
+// Program for setting xor gates in LFSR and getting output based on machine code.
 package edu.uic.lfsr;
 
 import java.io.BufferedReader;
