@@ -11,7 +11,6 @@
     * 
 */ 
 
-package edu.uic;
 
 public class patternDiamond {
 
