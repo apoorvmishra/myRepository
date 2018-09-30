@@ -1,6 +1,6 @@
 /* This code takes string as an input and checks if it is a palindrome, while considering alphabets and numerics only*/
 
-public class alphaNumericPalindrome {
+public class AlphaNumericPalindrome {
     public static void main(String[] args){
         String input = "Ab?/Ba";
         input = input.toLowerCase().replaceAll(" ", "");
