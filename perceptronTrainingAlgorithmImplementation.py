@@ -1,4 +1,4 @@
-/* Implementation of Perceptron Training Algorithm */
+##Implementation of Perceptron Training Algorithm
 
 import random
 import numpy as np
