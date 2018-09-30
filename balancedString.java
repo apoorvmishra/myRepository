@@ -5,7 +5,7 @@ Eg. The string "(a(a{}))" is balanced whereas, "({)}" is not balanced.
 import java.util.Scanner;
 import java.util.Stack;
 
-public class balancedString {
+public class BalancedString {
     static Scanner sc = new Scanner(System.in);
 
     public static void main (String args[]){
