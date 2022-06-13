@@ -1,0 +1,16 @@
+# This is a basic workflow that is manually triggered
+
+on: [pull_request_target]
+
+jobs:
+  checklist_job:
+    runs-on: ubuntu-latest
+    name: Checklist job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Checklist
+        uses: wyozi/contextual-qa-checklist-action@master
+        with:
+          gh-token: ${{ secrets.GITHUB_TOKEN }}
+          # See options documentation below
