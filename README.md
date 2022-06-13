@@ -1,3 +1,3 @@
 # myRepository
 
-This repository has Java and Python codes.
+This repository has Java, JS and Python codes.
