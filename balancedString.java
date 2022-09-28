@@ -17,8 +17,8 @@ public class BalancedString {
     public static boolean checkBalancedString(String input) {
         char[] inputArray = input.toCharArray();
         Stack<Character> parenthesesStack = new Stack();
-        for(char character: inputArray){
-            if(character == '(' || character == '{' || character == '['){
+        for(char character: inputArray) {
+            if(character == '(' || character == '{' || character == '[') {
                 parenthesesStack.push(character);
             }
             if((character == ')' || character == '}' || character == ']')) {
