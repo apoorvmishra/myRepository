@@ -6,4 +6,8 @@ paths:
   "src/components/**.js":
   - Did you check that the component visual look still matches design documents?
   "docs/**":
-  - Did you run changes past the copywrite team?
+    - Did you run changes past the copywrite team?
+  "**.java":
+    - Did you review the JAVA Review Checklist?
+  "**.py":
+    - Did you review the Python Review Checklist?  
