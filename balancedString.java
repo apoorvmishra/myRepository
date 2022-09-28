@@ -8,21 +8,20 @@ import java.util.Stack;
 public class BalancedString {
     static Scanner sc = new Scanner(System.in);
 
-    public static void main (String args[]){
-
+    public static void main (String args[]) {
         System.out.println("Enter string with parentheses");
         String inputString = sc.next();
         System.out.println(checkBalancedString(inputString));
     }
 
-    public static boolean checkBalancedString(String input){
+    public static boolean checkBalancedString(String input) {
         char[] inputArray = input.toCharArray();
         Stack<Character> parenthesesStack = new Stack();
-        for(char character: inputArray){
-            if(character == '(' || character == '{' || character == '['){
+        for(char character: inputArray) {
+            if(character == '(' || character == '{' || character == '[') {
                 parenthesesStack.push(character);
             }
-            if((character == ')' || character == '}' || character == ']')){
+            if((character == ')' || character == '}' || character == ']')) {
 
                 if(parenthesesStack.empty())
                     return false;
