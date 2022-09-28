@@ -112,4 +112,3 @@ cursor.execute(query)
 
 cnx.commit()
 cnx.close()
-
